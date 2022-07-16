@@ -40,5 +40,6 @@ public class PlayerController : MonoBehaviour
     private void OnDieListener()
     {
         gameObject.SetActive(false);
+        GameManager.instance.GameOver();
     }
 }
