@@ -6,23 +6,39 @@ public class Weapon_Shoot : MonoBehaviour
 {
     [SerializeField] float bulletsSpeed = 10f;
     [SerializeField] float shootDelay = 0.5f;
-    public int ammoAmount;
+    [SerializeField] int ammoAmount;
+    int startAmmo;
 
     [SerializeField] Rigidbody2D bulletPrefab;
     [SerializeField] Transform spawnPoint;
 
     bool _canShoot;
 
-    void Start()
+    void Awake()
     {
+        startAmmo = ammoAmount;
         _canShoot = true;
+    }
+
+    public void ResetAmmo()
+    {
+        ammoAmount = startAmmo;
     }
 
     void Update()
     {
-        if (Input.GetButton("Fire1") && _canShoot == true && ammoAmount > 0)
+        if (Input.GetButton("Fire1") && _canShoot == true)
         {
-            StartCoroutine(Co_ShootBullets());
+            if (ammoAmount > 0)
+            {
+                StartCoroutine(Co_ShootBullets());
+            }
+            else
+            {
+                Weapon_RandomChange newWeapon = FindObjectOfType<Weapon_RandomChange>();
+                gameObject.SetActive(false);
+                newWeapon.StartChoose();
+            }
         }
     }
 
