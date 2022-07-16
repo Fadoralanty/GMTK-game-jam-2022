@@ -18,15 +18,23 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
-        {
-            _playerAnimation.Running(true);
-        }
-        else
-        {
-            _playerAnimation.Running(false);
+        float hor = Input.GetAxisRaw("Horizontal");
+        float ver = Input.GetAxisRaw("Vertical");
 
+        _playerAnimation.RunningSides(hor != 0);
+
+        if (hor > 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
+        else if (hor < 0)  
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
+        _playerAnimation.RunningUP(ver > 0);
+
+        _playerAnimation.RunningDown(ver < 0);
     }
 
     private void OnDieListener()

@@ -13,8 +13,17 @@ public class PlayerAnimation : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    public void Running(bool isRunning)
+    public void RunningSides(bool isRunning)
     {
-        _animator.SetBool("IsRunning", isRunning);
+        _animator.SetBool("IsRunningsSides", isRunning);
     }
+    public void RunningUP(bool isRunningUp)
+    {
+        _animator.SetBool("RuninngUP", isRunningUp);
+    }
+    public void RunningDown(bool isRunningDown)
+    {
+        _animator.SetBool("RunningDown", isRunningDown);
+    }
+
 }
