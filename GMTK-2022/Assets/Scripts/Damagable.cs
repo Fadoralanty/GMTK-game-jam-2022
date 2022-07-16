@@ -25,7 +25,7 @@ public class Damagable : MonoBehaviour, IDamagable
         {
             _currentLife -= damage;
         }
-        onLifeChange.Invoke(_currentLife);
+        onLifeChange?.Invoke(_currentLife);
         if (_currentLife <= 0)
         {
             DieHandler();
@@ -39,7 +39,7 @@ public class Damagable : MonoBehaviour, IDamagable
             _currentLife = _maxLife;
 
         }
-        onLifeChange.Invoke(_currentLife);
+        onLifeChange?.Invoke(_currentLife);
 
     }
 
@@ -51,8 +51,7 @@ public class Damagable : MonoBehaviour, IDamagable
     public void ResetValues()
     {
         _currentLife = _maxLife;
-        onLifeChange.Invoke(_currentLife);
-
+        onLifeChange?.Invoke(_currentLife);
     }
 
     public float GetLifePercentage()
