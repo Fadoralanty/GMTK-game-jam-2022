@@ -6,9 +6,11 @@ public class Weapon_RandomChange : MonoBehaviour
 {
     [SerializeField] GameObject[] weapons;
     GameObject activeWeapon;
+    [SerializeField] private PlayerAimWeapon _playerAimWeapon;
 
     void Start()
     {
+        _playerAimWeapon = GetComponentInParent<PlayerAimWeapon>();
         ChooseRandomWeapon();
     }
     
@@ -26,8 +28,9 @@ public class Weapon_RandomChange : MonoBehaviour
             ChooseRandomWeapon();
             return;
         }
-
+    
         weapons[a].SetActive(true);
+        _playerAimWeapon.Weapon = weapons[a].transform;
         weapons[a].GetComponent<Weapon_Shoot>().ResetAmmo();
         activeWeapon = weapons[a];
     }

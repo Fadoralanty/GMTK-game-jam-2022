@@ -5,7 +5,7 @@ using UnityEngine;
 // https://www.youtube.com/watch?v=fuGQFdhSPg4&list=PLCFFG-BQwt311RcBeRnOmpgyI8KbuAn5F&index=1
 public class PlayerAimWeapon : MonoBehaviour
 {
-    [SerializeField] private Transform Weapon;
+     public Transform Weapon;
 
     private void Update()
     {

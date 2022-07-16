@@ -56,7 +56,7 @@ public class Weapon_Shoot : MonoBehaviour
     {
         Rigidbody2D bulletInstance;
         bulletInstance = Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
-        bulletInstance.velocity = spawnPoint.up * bulletsSpeed;
+        bulletInstance.velocity = spawnPoint.right * bulletsSpeed;
         ammoAmount--;
     }
 
