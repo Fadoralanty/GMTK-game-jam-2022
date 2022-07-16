@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Plataformer2d;
 using UnityEngine;
 
 public class Weapon_Shoot : MonoBehaviour
 {
     [SerializeField] float bulletsSpeed = 10f;
     [SerializeField] float shootDelay = 0.5f;
+    [SerializeField] private float CamShakeIntensity = 1;
     [SerializeField] int ammoAmount;
     int startAmmo;
 
@@ -58,6 +60,7 @@ public class Weapon_Shoot : MonoBehaviour
         bulletInstance = Instantiate(bulletPrefab, spawnPoint.position, spawnPoint.rotation);
         bulletInstance.velocity = spawnPoint.right * bulletsSpeed;
         ammoAmount--;
+        CameraShake.Instance.ShakeCamera(CamShakeIntensity,shootDelay);
     }
 
 }

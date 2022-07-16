@@ -2895,6 +2895,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 636018725813940783, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 42ca8de9ba0019346947e12d40f338b2, type: 3}
+    - target: {fileID: 636018725813940783, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366839256588944934, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
+      propertyPath: m_Name
+      value: MachineGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366839256588944936, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
+      propertyPath: CamShakeIntensity
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1366839256588944937, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -2955,13 +2971,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCharacter
       objectReference: {fileID: 0}
+    - target: {fileID: 3766792229605880818, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.144
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766792229605880818, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.039
+      objectReference: {fileID: 0}
+    - target: {fileID: 5912336386840239239, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
+      propertyPath: m_Name
+      value: Bazooka
+      objectReference: {fileID: 0}
     - target: {fileID: 5912336386840239240, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5912336386840239241, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
+      propertyPath: CamShakeIntensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946432350805705762, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
+      propertyPath: CamShakeIntensity
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5946432350805705763, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946432350805705772, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
+      propertyPath: m_Name
+      value: SlugShot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21ab529e78be8b34abae4004ff92f484, type: 3}
