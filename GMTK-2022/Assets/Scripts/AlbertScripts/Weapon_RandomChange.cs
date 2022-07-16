@@ -4,31 +4,32 @@ using UnityEngine;
 
 public class Weapon_RandomChange : MonoBehaviour
 {
-    [SerializeField] Weapon_Shoot weapon;
-    [SerializeField] Weapon_Shoot[] weapons;
-    bool nextWeapon;
+    [SerializeField] GameObject[] weapons;
+    GameObject activeWeapon;
 
     void Start()
     {
         ChooseRandomWeapon();
     }
-
-    void Update()
+    
+    public void StartChoose()
     {
-        if(weapon.ammoAmount <= 0 && nextWeapon)
-        {
-            Invoke("ChooseRandomWeapon", 0.5f);
-            nextWeapon = false;
-        }
+        Invoke("ChooseRandomWeapon", 0.5f);
     }
 
     void ChooseRandomWeapon()
     {
         int a = Random.Range(0, weapons.Length);
 
-        weapon = weapons[a];
+        if (weapons[a] == activeWeapon)
+        {
+            ChooseRandomWeapon();
+            return;
+        }
 
-        nextWeapon = true;
+        weapons[a].SetActive(true);
+        weapons[a].GetComponent<Weapon_Shoot>().ResetAmmo();
+        activeWeapon = weapons[a];
     }
 
 }
