@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Plataformer2d;
@@ -9,6 +10,7 @@ public class Weapon_Shoot : MonoBehaviour
     [SerializeField] float shootDelay = 0.5f;
     [SerializeField] private float CamShakeIntensity = 1;
     [SerializeField] int ammoAmount;
+    [SerializeField] private AudioSource _audioSource;
     int startAmmo;
 
     [SerializeField] Rigidbody2D bulletPrefab;
@@ -20,6 +22,14 @@ public class Weapon_Shoot : MonoBehaviour
     {
         startAmmo = ammoAmount;
         _canShoot = true;
+    }
+
+    private void Start()
+    {
+        if (_audioSource==null)
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
     }
 
     public void ResetAmmo()
@@ -61,6 +71,7 @@ public class Weapon_Shoot : MonoBehaviour
         bulletInstance.velocity = spawnPoint.right * bulletsSpeed;
         ammoAmount--;
         CameraShake.Instance.ShakeCamera(CamShakeIntensity,shootDelay);
+        _audioSource.Play();
     }
 
 }
