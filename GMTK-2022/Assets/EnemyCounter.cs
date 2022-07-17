@@ -8,14 +8,21 @@ using UnityEngine;
 public class EnemyCounter : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _enemiesLeft;
+    private float enemyNum;
 
     private void Awake()
     {
         _enemiesLeft = GetComponent<TextMeshProUGUI>();
     }
 
+    private void Start()
+    {
+        enemyNum = GameManager.instance.EnemiesOnLevel.Count;
+    }
+
     private void Update()
     {
-        _enemiesLeft.text = "ENEMIES LEFT:" + GameManager.instance.EnemiesOnLevel.Count;
+        enemyNum = GameManager.instance.EnemiesOnLevel.Count;
+        _enemiesLeft.text = "ENEMIES LEFT: " + enemyNum;
     }
 }
