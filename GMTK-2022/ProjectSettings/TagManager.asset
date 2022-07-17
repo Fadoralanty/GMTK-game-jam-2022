@@ -46,6 +46,9 @@ TagManager:
   - name: Bullets
     uniqueID: 1620279699
     locked: 0
+  - name: Weapons
+    uniqueID: 169636549
+    locked: 0
   - name: Characters
     uniqueID: 1662837057
     locked: 0
