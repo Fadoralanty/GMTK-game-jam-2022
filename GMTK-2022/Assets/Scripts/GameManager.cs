@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> EnemiesOnLevel = new List<GameObject>();
     public GameObject Victory_Screen;
     public GameObject Game_Over_Screen;
-    
+    public string NextLevelName;
     private void Awake()
     {
         if (instance==null)
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     {
         if (EnemiesOnLevel.Count == 0)
         {
-            StartCoroutine(LoadNextLevel("MAIN MENU"));
+            StartCoroutine(LoadNextLevel(NextLevelName));
         }
     }
     

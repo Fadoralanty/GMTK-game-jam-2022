@@ -454,6 +454,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4365608970058931395, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
+      propertyPath: ammoAmount
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4365608970058931405, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_Name
       value: Pistol
@@ -495,23 +499,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4365608968978082797, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.1983
+      value: 0.5787269
       objectReference: {fileID: 0}
     - target: {fileID: 4365608968978082797, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.198
+      value: 0.8790619
       objectReference: {fileID: 0}
     - target: {fileID: 4365608968978082797, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.1983
+      value: 0.5787269
       objectReference: {fileID: 0}
     - target: {fileID: 4365608968978082797, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.32
+      value: 1.2183
       objectReference: {fileID: 0}
     - target: {fileID: 4365608968978082797, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.37
+      value: -0.2366
       objectReference: {fileID: 0}
     - target: {fileID: 4365608970058931394, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_RootOrder
@@ -567,7 +571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4365608970058931395, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: ammoAmount
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4365608970058931395, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: shootDelay
@@ -699,7 +703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4365608970058931395, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: ammoAmount
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4365608970058931395, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: shootDelay
@@ -754,12 +758,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 3766792229101305354}
     m_Modifications:
     - target: {fileID: 718039600, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd9cd373a9672ee469428c24c7812c04, type: 3}
+    - target: {fileID: 718039600, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 718039600, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_SortingLayerID
       value: 169636549
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365608968978082797, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.82154334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365608968978082797, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9428032
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365608968978082797, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.82154334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365608968978082797, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2263
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365608968978082797, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3659
       objectReference: {fileID: 0}
     - target: {fileID: 4365608970058931394, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_RootOrder
@@ -839,7 +867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4365608970058931405, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_Name
-      value: Bazooka
+      value: Sniper
       objectReference: {fileID: 0}
     - target: {fileID: 4365608970058931405, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: m_IsActive
