@@ -575,7 +575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4365608970058931395, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: shootDelay
-      value: 0.1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4365608970058931395, guid: e52aab88ade241443a5e4a6c0cf03ae9, type: 3}
       propertyPath: spawnPoint

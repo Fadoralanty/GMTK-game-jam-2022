@@ -152,8 +152,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
-  _movementSpeed: 10
+  _movementSpeed: 15
   _detectionRange: 5
+  _damagable: {fileID: 0}
 --- !u!58 &3418859164987832542
 CircleCollider2D:
   m_ObjectHideFlags: 0
