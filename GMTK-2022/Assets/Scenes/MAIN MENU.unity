@@ -651,6 +651,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5038020061837940849, guid: 9506003a19833c54ba173c40e0da4175, type: 3}
+      propertyPath: PLAY_Scene_Name
+      value: Level 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5038020061837940850, guid: 9506003a19833c54ba173c40e0da4175, type: 3}
       propertyPath: m_Name
       value: Main Menu
