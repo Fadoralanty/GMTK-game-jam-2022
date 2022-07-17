@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Bullet_Collisions : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
-    }
+    [SerializeField] private float damage = 20;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.CompareTag("Enemy"))
+        {
+            collision.GetComponent<Damagable>().GetDamage(damage);
+        }
+        if (!collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+        
     }
 
 }
