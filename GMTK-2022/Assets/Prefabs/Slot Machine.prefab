@@ -124,6 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damagable: {fileID: 3634288184373988105}
   _damage: 20
+  flashMaterial: {fileID: 2100000, guid: b14003b419ca07a4aad410b87c883b76, type: 2}
+  duration: 0.1
 --- !u!114 &3634288184373988105
 MonoBehaviour:
   m_ObjectHideFlags: 0
