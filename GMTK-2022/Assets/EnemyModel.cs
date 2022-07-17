@@ -27,13 +27,16 @@ public class EnemyModel : MonoBehaviour
         GameManager.instance.EnemiesOnLevel.Add(gameObject);
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalMaterial = spriteRenderer.material;
-        _audioSource = GetComponent<AudioSource>();
+        if (_audioSource==null)
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
     }
 
     public void OnDieListener()
     {
-        gameObject.SetActive(false);
         GameManager.instance.EnemiesOnLevel.Remove(gameObject);
+        gameObject.SetActive(false);
 
     }
     
@@ -50,7 +53,7 @@ public class EnemyModel : MonoBehaviour
         }
         flashRoutine = StartCoroutine(FlashRoutine());
     }
-    private IEnumerator FlashRoutine()
+    public IEnumerator FlashRoutine()
     {
         spriteRenderer.material = flashMaterial;
         yield return new WaitForSeconds(duration);
