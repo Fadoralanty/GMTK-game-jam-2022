@@ -12,6 +12,10 @@ public class RedEnemyController : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Start()
+    {
         _target = GameManager.instance.playerTransform;
     }
 
