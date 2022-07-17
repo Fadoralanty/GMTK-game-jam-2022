@@ -35,6 +35,10 @@ public class PlayerController : MonoBehaviour
         _playerAnimation.RunningUP(ver > 0);
 
         _playerAnimation.RunningDown(ver < 0);
+        if (Input.GetMouseButtonDown(1))
+        {
+            _playerAnimation.DodgeRoll();
+        }
     }
 
     private void OnDieListener()

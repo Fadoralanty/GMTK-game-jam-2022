@@ -26,4 +26,9 @@ public class PlayerAnimation : MonoBehaviour
         _animator.SetBool("RunningDown", isRunningDown);
     }
 
+    public void DodgeRoll()
+    {
+        _animator.SetTrigger("DodgeRoll");
+    }
+
 }
