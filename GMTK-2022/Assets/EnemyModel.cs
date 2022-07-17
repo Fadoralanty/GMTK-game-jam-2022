@@ -10,6 +10,7 @@ public class EnemyModel : MonoBehaviour
     [SerializeField] private float _damage = 20f;
     [SerializeField] private Material flashMaterial;
     [SerializeField] private float duration = 0.1f;
+    [SerializeField] private AudioSource _audioSource;
     private SpriteRenderer spriteRenderer;
     private Material originalMaterial;
     private Coroutine flashRoutine;
@@ -26,6 +27,7 @@ public class EnemyModel : MonoBehaviour
         GameManager.instance.EnemiesOnLevel.Add(gameObject);
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalMaterial = spriteRenderer.material;
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void OnDieListener()
@@ -38,6 +40,7 @@ public class EnemyModel : MonoBehaviour
     public void OnLifeChangeHandler(float num)
     {
         Flash();
+        _audioSource.Play();
     }
     public void Flash()
     {

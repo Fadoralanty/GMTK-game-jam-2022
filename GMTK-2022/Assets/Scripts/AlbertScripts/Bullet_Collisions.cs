@@ -12,7 +12,7 @@ public class Bullet_Collisions : MonoBehaviour
         {
             collision.GetComponent<Damagable>().GetDamage(damage);
         }
-        if (!collision.gameObject.CompareTag("Player"))
+        if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject);
         }
